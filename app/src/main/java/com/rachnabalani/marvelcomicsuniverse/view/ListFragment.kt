@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.rachnabalani.marvelcomicsuniverse.R
-import com.rachnabalani.marvelcomicsuniverse.model.modelCharacter
+import com.rachnabalani.marvelcomicsuniverse.model.Characters
 import com.rachnabalani.marvelcomicsuniverse.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 
@@ -22,6 +22,7 @@ class ListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -30,11 +31,20 @@ class ListFragment : Fragment() {
             adapter = listAdapter
         }
 
+        refreshLayout.setOnRefreshListener {
+            characterList.visibility = View.GONE
+            errorMessage.visibility = View.GONE
+            loadingProgressBar.visibility = View.VISIBLE
+            viewModel.refresh()
+            refreshLayout.isRefreshing = false
+
+        }
+
         //our viewmodel needs to know which view is linked to it, so we attach fragment in the below line. This ensures that view's lifecycle changes doesn't affect the data
         //and ensures that data can be mutable based on fragment changes
         viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
         //here we are creating an observe, basically asking this view to keep observing the viewModel data (character variable's data in this case)
-        viewModel.character.observe(viewLifecycleOwner, Observer<List<modelCharacter>> {
+        viewModel.character.observe(viewLifecycleOwner, Observer<List<Characters>> {
             it?.let {
                 characterList.visibility = View.VISIBLE
                 listAdapter.updateCharacterList(it)
