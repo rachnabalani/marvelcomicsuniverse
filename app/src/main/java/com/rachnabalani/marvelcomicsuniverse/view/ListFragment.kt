@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.rachnabalani.marvelcomicsuniverse.R
 import com.rachnabalani.marvelcomicsuniverse.model.Characters
+import com.rachnabalani.marvelcomicsuniverse.model.Results
 import com.rachnabalani.marvelcomicsuniverse.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 
@@ -44,7 +45,7 @@ class ListFragment : Fragment() {
         //and ensures that data can be mutable based on fragment changes
         viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
         //here we are creating an observe, basically asking this view to keep observing the viewModel data (character variable's data in this case)
-        viewModel.character.observe(viewLifecycleOwner, Observer<List<Characters>> {
+        viewModel.character.observe(viewLifecycleOwner, Observer<List<Results>> {
             it?.let {
                 characterList.visibility = View.VISIBLE
                 listAdapter.updateCharacterList(it)

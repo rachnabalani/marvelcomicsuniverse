@@ -10,7 +10,7 @@ data class Characters(
     val copyright: String,
     val attributionText: String,
     val attributionHTML: String,
-    val data: Data,
+    val data: Data?,
     val etag: String
 )
 data class Data(
@@ -18,7 +18,7 @@ data class Data(
     val limit: Int,
     val total: Int,
     val count: Int,
-    val results: ArrayList<Results>
+    val results: ArrayList<Results>?
 )
 
 data class Results(

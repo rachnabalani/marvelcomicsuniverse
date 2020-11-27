@@ -5,9 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rachnabalani.marvelcomicsuniverse.R
 import com.rachnabalani.marvelcomicsuniverse.model.Characters
+import com.rachnabalani.marvelcomicsuniverse.model.Results
 import kotlinx.android.synthetic.main.item_character.view.*
 
-class CharacterListAdapter(private val characterList : ArrayList<Characters>):
+class CharacterListAdapter(private val characterList : ArrayList<Results>):
     RecyclerView.Adapter<CharacterViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
@@ -24,7 +25,7 @@ class CharacterListAdapter(private val characterList : ArrayList<Characters>):
         holder.view.characterName.text = characterList[position].name
     }
 
-    fun updateCharacterList(newCharacterList: List<Characters>){
+    fun updateCharacterList(newCharacterList: List<Results>){
         characterList.clear()
         characterList.addAll(newCharacterList)
         notifyDataSetChanged()
