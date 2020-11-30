@@ -20,5 +20,5 @@ Here's a special highlight of other things I learnt while implementing this app 
 1. <b>Learned how to apply Kotlin extension functions.</b> This is being used on the ImageView library by android's widget package. I used an ext4ension function called loadImage and made it load the uri using Glide library. Also used Glide to auto-implement a progressBar while the image is extracted in the background.  Here's my reference to how I learnt it, and advanced reading - 
 https://www.raywenderlich.com/10986797-extension-functions-and-properties-in-kotlin 
 
-2. Learnt the best design patterns to use with current Android improvements. Some of the old architecture like MVC might be too heavy, compared to MVVM that helps us implement the Jetpack libraries better. Resource for easy revision on classic design pattern fundamentals - https://blog.mindorks.com/mastering-design-patterns-in-android-with-kotlin 
+2. <b>Learnt the best design patterns to use with current Android improvements.</b> Some of the old architecture like MVC might be too heavy, compared to MVVM that helps us implement the Jetpack libraries better. Resource for easy revision on classic design pattern fundamentals - https://blog.mindorks.com/mastering-design-patterns-in-android-with-kotlin 
 
