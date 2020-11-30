@@ -1,14 +1,19 @@
 package com.rachnabalani.marvelcomicsuniverse.tools
 
 
+import android.content.Context
 import android.util.Log
+import android.widget.ImageView
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.rachnabalani.marvelcomicsuniverse.R
 import java.math.BigInteger
 import java.security.MessageDigest
 import kotlin.collections.Map
 
 
 class Utils {
-
     val PUBLIC_KEY = "your_pub_key"
     val PRIVATE_KEY = "your_private_key"
 
@@ -40,6 +45,14 @@ class Utils {
         )
         return hashMapOf(TIMESTAMP to ts, API_KEY to PUBLIC_KEY, HASH to hash)
         
+    }
+
+    fun getProgressDrawable(context: Context) : CircularProgressDrawable {
+        return CircularProgressDrawable(context).apply {
+            strokeWidth = 10f
+            centerRadius = 50f
+            start()
+        }
     }
 
 }
