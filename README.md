@@ -23,3 +23,6 @@ https://www.raywenderlich.com/10986797-extension-functions-and-properties-in-kot
 2. <b>Learnt the best design patterns to use with current Android improvements.</b> Some of the old architecture like MVC might be too heavy, compared to MVVM that helps us implement the Jetpack libraries better. Resource for easy revision on classic design pattern fundamentals - https://blog.mindorks.com/mastering-design-patterns-in-android-with-kotlin 
 
 3. <b>Instead of using Intents to passs data/parcel around fragments, used Navigation Component's actions </b> Here's also a good article to summarise why using Navigation Component is the best idea for any newee app - https://medium.com/disney-streaming/why-i-happily-use-the-architecture-navigation-component-887277fce249 
+
+
+And here's some screenshots on how it looks (didn't focus too much on making it fancy, this is just too learn new architectural concepts)
