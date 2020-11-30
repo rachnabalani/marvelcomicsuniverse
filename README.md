@@ -1,4 +1,4 @@
-# marvelcomicsuniverse
+# marvel Comics Universe - Characters
 I created this app to practice building my own app using all the latest trends and technologies that have been coming up in Android. Specially these ones - 
 
   > ~ MVVM architecture best practices
