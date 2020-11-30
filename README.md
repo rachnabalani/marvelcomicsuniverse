@@ -1,5 +1,6 @@
-# marvel Comics Universe - Characters
-I created this app to practice building my own app using all the latest trends and technologies that have been coming up in Android. Specially these ones - 
+# Marvel Comics Universe - Comic Characters 
+(To download the app, please check the apk attached on the right, as the final release build.)
+I created this app to practice all the latest trends and technologies that have been coming up in Android. Specially these ones - 
 
   > ~ MVVM architecture best practices
   
