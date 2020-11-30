@@ -1,6 +1,6 @@
 # Marvel Comics Universe - Comic Characters 
 (To download the app, please check the apk attached on the right, as the final release build. To see in Android Studio, please clone and add your own public/private keys in Utils.kt class)
-I created this app to practice all the latest trends and technologies that have been coming up in Android. Specially these ones - 
+I created this app to practice all the latest trends and technologies that have been coming up in Android.  Specially these ones - 
 
   > ~ MVVM architecture best practices
   
@@ -10,7 +10,7 @@ I created this app to practice all the latest trends and technologies that have 
   
   > ~ Android Jetpack -- ViewBinding, Navigation Component, DataBinding (https://developer.android.com/jetpack)
   
-  > ~ Retrofit (https://www.raywenderlich.com/4539-android-networking) and (https://www.vogella.com/tutorials/Retrofit/article.html)
+  > ~ Retrofit and OAuth/Key Authentication for API calls (https://www.raywenderlich.com/4539-android-networking) and (https://www.vogella.com/tutorials/Retrofit/article.html)
   
   > ~ Dagger2  (https://developer.android.com/training/dependency-injection/dagger-basics)
   
