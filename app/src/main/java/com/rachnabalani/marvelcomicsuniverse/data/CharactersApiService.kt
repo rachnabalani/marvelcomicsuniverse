@@ -22,7 +22,11 @@ class CharactersApiService {
         .create(CharacterApi::class.java)
 
     fun getCharacters() : Single<Characters> {
-        return api.getCharactersList(limit = 100, offset = 100, apikey = apiKey, ts = ts, hash = hash)
+        return api.getCharactersList(limit = 100, offset = 0, apikey = apiKey, ts = ts, hash = hash)
+    }
+
+    fun getComics(characterId: Int) : Single<Characters> {
+        return api.getComicsListByCharacter(limit = 20, offset = 0, apikey = apiKey, ts = ts, hash = hash, charId = characterId)
     }
 
 }

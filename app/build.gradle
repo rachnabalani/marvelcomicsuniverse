@@ -77,5 +77,6 @@ dependencies {
     testImplementation "android.arch.core:core-testing:1.1.1"
     kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"
 
+    apply plugin: "androidx.navigation.safeargs.kotlin"
 
 }

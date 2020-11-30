@@ -1,7 +1,6 @@
 package com.rachnabalani.marvelcomicsuniverse.model
 
 
-import java.util.*
 import kotlin.collections.ArrayList
 
 data class Characters(
@@ -25,14 +24,16 @@ data class Results(
     val id: Int,
     val name: String,
     val description: String,
-    val modified: Date,
+    val modified: String,
     val resourceURI: String,
     val urls: ArrayList<Urls>,
     val thumbnail: Thumbnail,
     val comics: EventClass,
     val stories: EventClass,
     val event: EventClass,
-    val series: EventClass
+    val series: EventClass,
+    val title: String?,
+    val images: ArrayList<Thumbnail>
     )
 
 data class Urls(

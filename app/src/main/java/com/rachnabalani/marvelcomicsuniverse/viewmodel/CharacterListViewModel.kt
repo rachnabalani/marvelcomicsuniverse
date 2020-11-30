@@ -12,7 +12,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 
-class ListViewModel(application: Application) : AndroidViewModel(application) {
+class CharacterListViewModel(application: Application) : AndroidViewModel(application) {
 
     // MutableLiveData lets us continuously change the list data based on whatever we are observing... helps observe any changes and keep updating liveData list
     val character by lazy { MutableLiveData<ArrayList<Results>>() } //lazy means create only when needed, or dont create ever.
@@ -25,14 +25,10 @@ class ListViewModel(application: Application) : AndroidViewModel(application) {
         CharactersApiService()
 
     fun refresh() {
-        getCharacter(getKey())
+        getCharacter()
     }
 
-    private fun getKey() : String? {
-        return apiService.apiKey
-    }
-
-    private fun getCharacter(key: String?) {
+    private fun getCharacter() {
         disposible.add(
             apiService.getCharacters()
                 .subscribeOn(Schedulers.io())

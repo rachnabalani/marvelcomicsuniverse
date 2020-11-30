@@ -9,14 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.rachnabalani.marvelcomicsuniverse.R
-import com.rachnabalani.marvelcomicsuniverse.model.Characters
 import com.rachnabalani.marvelcomicsuniverse.model.Results
-import com.rachnabalani.marvelcomicsuniverse.viewmodel.ListViewModel
+import com.rachnabalani.marvelcomicsuniverse.viewmodel.CharacterListViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment() {
 
-    private lateinit var viewModel: ListViewModel
+    private lateinit var viewModelCharacter: CharacterListViewModel
     private val listAdapter = CharacterListAdapter(arrayListOf())
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -36,35 +35,35 @@ class ListFragment : Fragment() {
             characterList.visibility = View.GONE
             errorMessage.visibility = View.GONE
             loadingProgressBar.visibility = View.VISIBLE
-            viewModel.refresh()
+            viewModelCharacter.refresh()
             refreshLayout.isRefreshing = false
 
         }
 
         //our viewmodel needs to know which view is linked to it, so we attach fragment in the below line. This ensures that view's lifecycle changes doesn't affect the data
         //and ensures that data can be mutable based on fragment changes
-        viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
-        //here we are creating an observe, basically asking this view to keep observing the viewModel data (character variable's data in this case)
-        viewModel.character.observe(viewLifecycleOwner, Observer<List<Results>> {
+        viewModelCharacter = ViewModelProvider(this).get(CharacterListViewModel::class.java)
+        //here we are creating an observe, basically asking this view to keep observing the viewModelCharacter data (character variable's data in this case)
+        viewModelCharacter.character.observe(viewLifecycleOwner, Observer<List<Results>> {
             it?.let {
                 characterList.visibility = View.VISIBLE
                 listAdapter.updateCharacterList(it)
             }
         })
-        viewModel.loading.observe(viewLifecycleOwner, Observer<Boolean> {
+        viewModelCharacter.loading.observe(viewLifecycleOwner, Observer<Boolean> {
             loadingProgressBar.visibility = if(it) View.VISIBLE else View.GONE
             if(it) {
                 characterList.visibility = View.GONE
                 errorMessage.visibility = View.GONE
             }
         })
-        viewModel.loadError.observe(viewLifecycleOwner, Observer<Boolean> {
+        viewModelCharacter.loadError.observe(viewLifecycleOwner, Observer<Boolean> {
             if(it) {
                 loadingProgressBar.visibility = View.GONE
                 errorMessage.visibility = View.VISIBLE
             }
         })
-        viewModel.refresh()
+        viewModelCharacter.refresh()
     }
 
 }

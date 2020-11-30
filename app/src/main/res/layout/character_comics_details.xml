@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/characterItemLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/characterListImage"
+        android:id="@+id/imageViewComic"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="fitXY"
@@ -18,16 +18,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/characterName"
+        android:id="@+id/textViewComic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#afff"
         android:gravity="center"
         android:padding="4dp"
-        style="@style/Title"
+        style="@style/Text"
         tools:text="character name"
-        app:layout_constraintBottom_toBottomOf="@+id/characterListImage"
-        app:layout_constraintEnd_toEndOf="@+id/characterListImage"
-        app:layout_constraintStart_toStartOf="@+id/characterListImage" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewComic"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewComic"
+        app:layout_constraintStart_toStartOf="@+id/imageViewComic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

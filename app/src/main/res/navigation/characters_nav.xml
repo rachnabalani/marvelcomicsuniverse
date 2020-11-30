@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.rachnabalani.marvelcomicsuniverse.view.ListFragment"
-        android:label="fragment_list"
+        android:label="Characters of the Universe"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/navToDetails"
@@ -17,10 +17,20 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.rachnabalani.marvelcomicsuniverse.view.DetailsFragment"
-        android:label="fragment_details"
+        android:label="Character Details"
         tools:layout="@layout/fragment_details" >
         <action
             android:id="@+id/navToList"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="characterIdForComic"
+            app:argType="integer"
+            android:defaultValue="1011198" />
+        <argument
+            android:name="characterImage"
+            app:argType="string" />
+        <argument
+            android:name="characterName"
+            app:argType="string" />
     </fragment>
 </navigation>

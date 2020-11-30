@@ -14,4 +14,14 @@ interface CharacterApi {
         @Query("apikey") apikey: String?,
         @Query("hash") hash: String?
     ): Single<Characters>
+
+    @GET("/v1/public/characters/{characterId}/comics")
+    fun getComicsListByCharacter(
+        @Path("characterId")charId : Int,
+        @Query("limit")limit : Int=100,
+        @Query("offset")offset: Int=100,
+        @Query("ts") ts : String?,
+        @Query("apikey") apikey: String?,
+        @Query("hash") hash: String?
+    ): Single<Characters>
 }

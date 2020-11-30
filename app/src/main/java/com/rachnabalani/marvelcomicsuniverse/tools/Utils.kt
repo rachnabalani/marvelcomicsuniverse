@@ -3,11 +3,7 @@ package com.rachnabalani.marvelcomicsuniverse.tools
 
 import android.content.Context
 import android.util.Log
-import android.widget.ImageView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import com.rachnabalani.marvelcomicsuniverse.R
 import java.math.BigInteger
 import java.security.MessageDigest
 import kotlin.collections.Map
