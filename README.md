@@ -26,3 +26,9 @@ https://www.raywenderlich.com/10986797-extension-functions-and-properties-in-kot
 
 
 And here's some screenshots on how it looks (didn't focus too much on making it fancy, this is just too learn new architectural concepts)
+
+<div align="center">
+  <img src="screenshot_mainPage.png" width="300px" height="600px"</img>
+   <img height="0" width="50px">
+   <img src="screenshot_detailsPage.png" width="300px" height="600px"</img> 
+</div>
