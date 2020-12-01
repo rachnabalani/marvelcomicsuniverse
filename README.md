@@ -10,6 +10,8 @@ I created this app to practice all the latest trends and technologies that have 
   
   > ~ Android Jetpack -- ViewBinding, Navigation Component, DataBinding (https://developer.android.com/jetpack)
   
+  > ~ Improved DataBinding with DiffUtil class, for all recyclerViews (https://developer.android.com/codelabs/kotlin-android-training-diffutil-databinding)
+  
   > ~ Retrofit and OAuth/Key Authentication for API calls (https://www.raywenderlich.com/4539-android-networking) and (https://www.vogella.com/tutorials/Retrofit/article.html)
   
   > ~ Dagger2  (https://developer.android.com/training/dependency-injection/dagger-basics)
