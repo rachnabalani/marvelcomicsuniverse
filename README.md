@@ -27,6 +27,8 @@ https://www.raywenderlich.com/10986797-extension-functions-and-properties-in-kot
 
 3. <b>Instead of using Intents to passs data/parcel around fragments, used Navigation Component's actions </b> Here's also a good article to summarise why using Navigation Component is the best idea for any newee app - https://medium.com/disney-streaming/why-i-happily-use-the-architecture-navigation-component-887277fce249 
 
+4. <b>Using DiffUtil.Callbacks to improve recyclerView + Databinding experience and performance </b>. Here's an amazing starter tutorial doc I referred https://developer.android.com/codelabs/kotlin-android-training-diffutil-databinding
+
 
 And here's some screenshots on how it looks (didn't focus too much on making it fancy, this is just too learn new architectural concepts)
 
